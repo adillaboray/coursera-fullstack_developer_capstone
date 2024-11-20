@@ -124,3 +124,23 @@ img{
     text-align:center;
     box-shadow: 2px 2px 3px #999;  
 }
+
+.input_lists {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.list_item {
+  color: #0C9;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.list_item.label {
+  color: black;
+  margin-top: 8px;
+  text-decoration: none;
+  font-weight: normal;
+}
