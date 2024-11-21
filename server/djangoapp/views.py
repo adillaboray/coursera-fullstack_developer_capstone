@@ -67,7 +67,7 @@ def registration_user(request):
     
     # If it is a new user
     if not username_exist:
-        user = User.Objects.create_user(username=username, first_name=first_name, last_name=last_name, password=password, email=email)
+        user = User.objects.create_user(username=username, first_name=first_name, last_name=last_name, password=password, email=email)
 
         login(request, user)
         data = {"userName":username, "status":"Authenticated"}
@@ -75,7 +75,7 @@ def registration_user(request):
     else:
         data = {"userName":username, "error":"Already Registered"}
         return JsonResponse(data)
-        
+
 # # Update the `get_dealerships` view to render the index page with
 # a list of dealerships
 # def get_dealerships(request):
